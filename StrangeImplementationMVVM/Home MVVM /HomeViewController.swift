@@ -50,59 +50,9 @@ class HomeViewController: UIViewController {
     }
 }
 
-protocol DataManagerHomeProtocol {
-    func obtainNumbers() -> [Int]
-}
 
-class DataManagerHome: DataManagerHomeProtocol {
-    
-    func obtainNumbers() -> [Int] {
-        return [1,2,3,4,5,6]
-    }
-}
 
-protocol HomeViewModelDelegate {
-    
-    var text: String { get set }
-    var textDidChangedHandler: ((String) -> ())? { get set }
-    func obtainNumbers()
-}
 
-class HomeViewModel: HomeViewModelDelegate {
-    
-    var dataManagerHome: DataManagerHomeProtocol!
-    
-    var text: String = "" {
-        didSet {
-            textDidChangedHandler?(text)
-        }
-    }
-    
-    var textDidChangedHandler: ((String) -> ())?
-    
-    func obtainNumbers() {
-        let numbers = dataManagerHome.obtainNumbers()
-        text = numbers.map({"\($0)"}).joined(separator: ",")
-        print("obtain")
-    }
-}
-
-class MainAssembly {
-    
-    class func configuredModul() -> UIViewController {
-        
-        let view = HomeViewController()
-        
-        let homeViewModel = HomeViewModel()
-        let dataManagerHome = DataManagerHome()
-        
-        view.homeViewModel = homeViewModel
-        homeViewModel.dataManagerHome = dataManagerHome
-        
-        return view
-    }
-    
-}
 
 
 

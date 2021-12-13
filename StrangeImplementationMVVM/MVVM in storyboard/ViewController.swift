@@ -6,6 +6,7 @@
 //
 
 import UIKit
+// Implementation in storyBoard
 
 class ViewController: UIViewController {
 
@@ -83,9 +84,6 @@ class MVVMAssembly: NSObject {
     
     
 }
-
-
-
 
 
 
