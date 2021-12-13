@@ -17,6 +17,7 @@
 		847B37122766FBB400729F58 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B37112766FBB400729F58 /* DataManager.swift */; };
 		847B37142766FBFA00729F58 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B37132766FBFA00729F58 /* MainAssembly.swift */; };
 		847B37162766FCE100729F58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B37152766FCE100729F58 /* HomeViewModel.swift */; };
+		847B371827670AF900729F58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B371727670AF900729F58 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		847B37112766FBB400729F58 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		847B37132766FBFA00729F58 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		847B37152766FCE100729F58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		847B371727670AF900729F58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				847B36CB274E4E5700729F58 /* HomeViewController.swift */,
+				847B371727670AF900729F58 /* HomeView.swift */,
 				847B37152766FCE100729F58 /* HomeViewModel.swift */,
 				847B37112766FBB400729F58 /* DataManager.swift */,
 				847B37132766FBFA00729F58 /* MainAssembly.swift */,
@@ -170,6 +173,7 @@
 				847B37162766FCE100729F58 /* HomeViewModel.swift in Sources */,
 				847B36B8274DFE7700729F58 /* AppDelegate.swift in Sources */,
 				847B36BA274DFE7700729F58 /* SceneDelegate.swift in Sources */,
+				847B371827670AF900729F58 /* HomeView.swift in Sources */,
 				847B37142766FBFA00729F58 /* MainAssembly.swift in Sources */,
 				847B36CC274E4E5700729F58 /* HomeViewController.swift in Sources */,
 			);
