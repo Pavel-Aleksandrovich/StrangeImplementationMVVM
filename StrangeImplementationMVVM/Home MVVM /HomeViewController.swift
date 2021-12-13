@@ -9,31 +9,52 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    lazy var textLabel: UILabel = {
-        let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+    private var stackView = UIStackView()
+    
+    var textLabel: UILabel = {
+        let textLabel = UILabel()
         textLabel.textAlignment = .center
         textLabel.text = "textLabel"
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.font = .systemFont(ofSize: 22, weight: .heavy)
         return textLabel
     }()
     
-    lazy var button: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 100))
-        button.layer.cornerRadius = 10
+     var button: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 20
         button.backgroundColor = .orange
         button.addTarget(self, action: #selector(didTappedButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(textLabel)
-        view.addSubview(button)
-        textLabel.center = view.center
-        button.center = view.center
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(textLabel)
+        stackView.addArrangedSubview(button)
+        
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.spacing = 20
+        
         view.backgroundColor = .gray
+        
+        [stackView, textLabel, button].forEach{
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.heightAnchor.constraint(lessThanOrEqualToConstant: 500),
+            
+            button.widthAnchor.constraint(equalToConstant: 240),
+            button.heightAnchor.constraint(equalToConstant: 80)
+        ])
     }
     
     var homeViewModel: HomeViewModelDelegate? {
@@ -49,11 +70,6 @@ class HomeViewController: UIViewController {
         print("tapped")
     }
 }
-
-
-
-
-
 
 
 

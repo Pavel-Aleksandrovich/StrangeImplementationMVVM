@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				847B36CB274E4E5700729F58 /* HomeViewController.swift */,
-				847B37112766FBB400729F58 /* DataManager.swift */,
 				847B37152766FCE100729F58 /* HomeViewModel.swift */,
+				847B37112766FBB400729F58 /* DataManager.swift */,
 				847B37132766FBFA00729F58 /* MainAssembly.swift */,
 			);
 			path = "Home MVVM ";
